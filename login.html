@@ -166,7 +166,7 @@
 
     function LoginController($scope){
         $scope.saved = localStorage.getItem('username');
-        $scope.usernames = (localStorage.getItem('username')!==null) ? (alert('Already Logged in'), window.location.href = '/WowsTrackrHTML/index.html'): [];
+        $scope.usernames = (localStorage.getItem('username')!==null) ? (alert('Already Logged in'), window.location.href = '/WowsTrackr/index.html'): [];
 
         $scope.submitLog = function() {
             if($scope.password === '123'){
@@ -175,7 +175,7 @@
                 });
                 localStorage.setItem('username', JSON.stringify($scope.usernames));
                 alert('Logged In!');
-                window.location.href = '/WowsTrackrHTML/index.html';
+                window.location.href = '/WowsTrackr/index.html';
             }else{
                 alert('False Username / Password!');
                 localStorage.clear();

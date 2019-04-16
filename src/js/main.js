@@ -101,5 +101,5 @@ function LogoutController($scope) {
 }
 function doLogout() {
     localStorage.clear();
-    window.location.href = '/WowsTrackrHTML/login.html'
+    window.location.href = '/WowsTrackr/login.html'
 }
