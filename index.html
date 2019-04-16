@@ -43,14 +43,15 @@
             <div class="input-group mb-2">
                 <div class="input-group-prepend">
                     <select id="inputState" class="form-control">
-                        <option selected>ASIA</option>
-                        <option>NA</option>
-                        <option>RU</option>
-                        <option>EU</option>
-                        <option>CN</option>
+                        <option selected value="asia">ASIA</option>
+                        <option value="na">NA</option>
+                        <option value="ru">RU</option>
+                        <option value="eu">EU</option>
                     </select>
                 </div>
-                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="In-game Name">
+                
+                <input type="text" class="form-control" id="ilieksearch" placeholder="In-game Name">
+                
                 <div class="input-group-prepend">
                     <button class="btn btn-danger" type="submit">Search</button>
                 </div>
@@ -63,7 +64,7 @@
 <div class="container h-90">
     <div class="row align-items-center h-75">
         <div class="col-lg-8 my-auto mx-auto text-center text-white">
-            <h1 class="punchline">Never lose track of your game progress.</h1>
+            <h1 class="punchline" id="res">Never lose track of your game progress.</h1>
             <h4 class="sub-punchline mt-5">Track your in-game statistics at wowstrackr &trade;</h4>
             <div class="mt-5">
                 <form class="w-75 mt-5 my-auto mx-auto">

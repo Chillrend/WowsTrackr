@@ -1,4 +1,33 @@
 $(document).ready(function () {
+    var regionSelected = $('#inputState :selected').val();
+    var usernameSelected = $('#ilieksearch');
+    var usernameWarning = $('#res');
+
+    usernameSelected.keyup(function() {
+        var url = 'https://api.worldofwarships.'+regionSelected+'/wows/account/list/?application_id=5683096485795178c5de2515394ade39';
+        var formData = {
+        'search' : usernameSelected.val(),
+        'limit'  : 5
+        };
+
+      $.ajax({
+        type : 'POST',
+        url : url,
+        data : formData,
+        dataType : 'JSON',
+        encode : true,
+        success: function (response, status, xhr) {
+          if (response.status == "ok") {
+            usernameWarning.html("DATA GETTT!");
+          }else{
+            usernameWarning.html("DATA NOT GETT!");
+          }
+        },
+        error: function (xhr, status, error) {
+          usernameWarning.html("Something went wrong!");
+        }
+      });
+    });
     var ctx = document.getElementById('warship-types').getContext('2d');
     var labels = ['Battleships', 'Destroyers', 'Cruisers', 'Aircraft Carriers'];
     var data = [683, 7, 696, 97];
@@ -97,7 +126,14 @@ $('.tablinks').click(function () {
 function LogoutController($scope) {
     let user = JSON.parse(localStorage.getItem('username'));
     let realUser = user[0].uname;
-    $scope.users = realUser;
+    if(user == null){
+        $scope.users = 'Login';
+    
+    }
+    else{
+        $scope.users = realUser;
+    }
+    
 }
 function doLogout() {
     localStorage.clear();
