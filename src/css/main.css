@@ -1,0 +1,314 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-dark{
+    background-color: #333333 !important;
+}
+#account_basic_stats{
+     display: block;
+     -webkit-transition: all .5s ease;
+     -moz-transition: all .5s ease;
+     -ms-transition: all .5s ease;
+     -o-transition: all .5s ease;
+     transition: all .5s ease;
+ }
+
+
+#detailed_stats{
+    display: none;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-family: 'Roboto Condensed', 'Helvetica', sans-serif;
+}
+select.form-control, input.form-control{
+    border-radius: 0 !important;
+    border: 0 !important;
+    border-left: 1px solid #000;
+}
+html, body{
+    height: 100%;
+}
+.btn-danger{
+    background-image: linear-gradient(0deg,#e12e00 0,#fd6200);
+}
+.container-fluid{
+    color: #fff;
+}
+
+.height-full{
+    min-height: 80%;
+}
+
+.font-weight-light{
+    font-family: 'Roboto Light', sans-serif;
+    font-weight: lighter;
+}
+
+.bgwows{
+    background: url(../img/main-bg_wowp.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.punchline{
+    font-family: Lato, sans-serif;
+    font-size: 52pt;
+    color: #e12e00;
+}
+.sub-punchline{
+    font-family: Lato, sans-serif;
+    font-size: 24pt;
+    color: #fff;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: -100;
+}
+
+video.fullscreen-bg___video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+video{
+    filter: brightness(60%);
+}
+
+.h-90{
+    height: 90%;
+}
+
+.no-display{
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.card:hover .no-display{
+    opacity: 1;
+    transition: all .5s ease;
+}
+
+.center{
+    margin-top: 25px;
+    position: relative;
+    left: 25%;
+}
+.input-group-text{
+    background: white !important;
+    border: 0 !important;
+}
+
+h5{
+    vertical-align: middle !important;
+}
+
+.text-white{
+    color: #fff;
+}
+.text-black{
+    color: #000 !important;
+}
+
+.text-premium{
+    color: #FFD700;
+}
+.card-title{
+    vertical-align: middle !important;
+}
+.ship-icon{
+    font-size: 32px;
+    vertical-align: middle;
+}
+
+/*PLAYER STAT STYLE*/
+h4.condensed{
+    font-size: 32pt;
+}
+hr{
+    border: 1px solid #fff;
+    background-color: #fff;
+    opacity: .2;
+    margin: 54px 0 50px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+}
+.condensed{
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+img{
+    vertical-align: middle;
+}
+
+.account_name{
+    vertical-align: middle;
+}
+
+.account_avatar>img{
+    position: relative;
+}
+
+.account_avatar>img._background{
+    position: absolute;
+}
+
+.nav-pills a{
+    color: white;
+    background: #303b41;
+    border-radius: 0 !important;
+}
+.nav-pills a:hover{
+    background: #3D4B53;
+    transition: background-color .5s ease;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: #52575A !important;
+    color: #FA9500 !important;
+    border-bottom: 3px solid #FA9500 !important;
+}
+
+.account_main_stats_table{
+    position: relative;
+    padding-top: 40px;
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+}
+.account_main_stats_table>div{
+     display: table-row;
+ }
+.account_main_stats_table>div>div:first-child{
+    padding-left: 0;
+}
+.account_main_stats_table>div>div{
+    width: 20%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+.account_main_stats_table>div>div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.account_main_stats_table>.name>div{
+    padding-top: 10px;
+    text-shadow: 0px 2px 2px rgba(0,0,0,.7);
+}
+.account_main_stats_table>.name>div{
+    font-size: 18px;
+}
+.account_main_stats_table>.values>div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0px 2px 2px rgba(0,0,0,.7);
+    font-size: 34px;
+}
+
+.background{
+    background-image: url(../img/bg-stat-top.png);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 435px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.background:after{
+    content: "";
+    background: linear-gradient(180deg,transparent,transparent 50%,#102031) 0 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -2px;
+}
+.wrepper{
+    background-color: #102031;
+}
+.margintop5{
+    margin-top: 120px !important;
+}
+/* linear-gradient(180deg,transparent,transparent 50%,#102031) 0 0 */
+
+.account_main_stats_table>.values>div{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+.account-battle-stats .account-title {
+    text-align: left;
+}
+.account-title {
+    margin-bottom: 20px;
+    font-family: "Roboto Condensed",sans-serif;
+    font-size: 30px;
+    color: #ffab34;
+}
+
+h2.account-title {
+    font-size: 42px;
+}
+
+.no-padding-top{
+    margin-top: 0 !important;
+}
+
+.account-table {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+}
+
+.account-table td {
+    text-align: initial;
+    line-height: 1.8;
+}
+
+.account-table ._value {
+    text-align: right;
+    color: #ccc;
+    padding-left: 5px;
+}
+.ship-stats{
+    display: none;
+}
+.account-table ._icon, .account-table ._name, .account-table ._value {
+    vertical-align: middle;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.account-table._left{
+    float: left;
+}
+
+.account-table._center{
+    margin: 0 auto;
+}
+
+.account-table._right{
+    float: right;
+}
+
+
+

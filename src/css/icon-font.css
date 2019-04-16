@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?b4p6dd');
+  src:  url('../fonts/icomoon.eot?b4p6dd#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?b4p6dd') format('truetype'),
+    url('../fonts/icomoon.woff?b4p6dd') format('woff'),
+    url('../fonts/icomoon.svg?b4p6dd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-stars:before {
+  content: "\e910";
+}
+.icon-trophy:before {
+  content: "\e911";
+}
+.icon-battle:before {
+  content: "\e900";
+}
+.icon-BB:before {
+  content: "\e901";
+}
+.icon-CA:before {
+  content: "\e902";
+}
+.icon-CV:before {
+  content: "\e903";
+}
+.icon-DD:before {
+  content: "\e904";
+}
+.icon-detonated:before {
+  content: "\e905";
+}
+.icon-fire:before {
+  content: "\e906";
+}
+.icon-flooding:before {
+  content: "\e907";
+}
+.icon-incap:before {
+  content: "\e908";
+}
+.icon-kill_main_battery:before {
+  content: "\e909";
+}
+.icon-kill_planes:before {
+  content: "\e90a";
+}
+.icon-kill_torpedo:before {
+  content: "\e90b";
+}
+.icon-potential_damage:before {
+  content: "\e90c";
+}
+.icon-spotting:before {
+  content: "\e90d";
+}
+.icon-sunk:before {
+  content: "\e90e";
+}
+.icon-wows:before {
+  content: "\e90f";
+}
