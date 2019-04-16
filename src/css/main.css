@@ -310,5 +310,17 @@ h2.account-title {
     float: right;
 }
 
+.searchresult {
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    right: 91px;
+    background: #fff;
+    width: 300px;
+    z-index: 999;
+}
 
-
+.searchlist{
+    display: block;
+    border-bottom: 2px solid #fff;
+}

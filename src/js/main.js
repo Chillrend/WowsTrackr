@@ -1,30 +1,68 @@
 $(document).ready(function () {
     var regionSelected = $('#inputState :selected').val();
     var usernameSelected = $('#ilieksearch');
+    $('.searchresult').hide();
     var usernameWarning = $('#res');
+    usernameSelected.keypress(function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+           
+    //     var url = 'https://api.worldofwarships.'+regionSelected+'/wows/account/list/?application_id=5683096485795178c5de2515394ade39';
+    //     var formData = {
+    //     'search' : usernameSelected.val(),
+    //     'limit'  : 5
+    //     };
 
+    //   $.ajax({
+    //     type : 'POST',
+    //     url : url,
+    //     data : formData,
+    //     dataType : 'JSON',
+    //     encode : true,
+    //     success: function (data) {
+    //       if (data.status == "ok") {
+    //         usernameWarning.html("DATA GETTT!");
+    //       }else{
+    //         usernameWarning.html("DATA NOT GETT!");
+    //       }
+    //     },
+    //     error: function (xhr, status, error) {
+    //       usernameWarning.html('something went wrong..');
+    //     }
+    //   });
+
+    }
+    else{}
+    });
     usernameSelected.keyup(function() {
         var url = 'https://api.worldofwarships.'+regionSelected+'/wows/account/list/?application_id=5683096485795178c5de2515394ade39';
         var formData = {
         'search' : usernameSelected.val(),
         'limit'  : 5
         };
-
+        let appends = $('.searchresult');
       $.ajax({
         type : 'POST',
         url : url,
         data : formData,
         dataType : 'JSON',
         encode : true,
-        success: function (response, status, xhr) {
-          if (response.status == "ok") {
-            usernameWarning.html("DATA GETTT!");
+        success: function (data) {
+          if (data.status == "ok" && data.data.length > 0) {
+              let actual_resp = data.data;
+              appends.show();
+              appends.empty();
+              actual_resp.forEach(element => {
+                  appends.append('<a class="searchlist" href="'+ element.account_id +'">'+element.nickname+'</a>');
+              })
           }else{
-            usernameWarning.html("DATA NOT GETT!");
+            appends.empty();
+
+            appends.append('<a class="searchlist">'+'Players Not Found'+'</a>');
           }
         },
         error: function (xhr, status, error) {
-          usernameWarning.html("Something went wrong!");
+          usernameWarning.html('something went wrong..');
         }
       });
     });
