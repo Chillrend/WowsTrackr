@@ -1,40 +1,14 @@
 $(document).ready(function () {
-    var regionSelected = $('#inputState :selected').val();
     var usernameSelected = $('#ilieksearch');
     $('.searchresult').hide();
     var usernameWarning = $('#res');
-    usernameSelected.keypress(function(event) {
-        var keycode = (event.keyCode ? event.keyCode : event.which);
-        if(keycode == '13'){
-           
-    //     var url = 'https://api.worldofwarships.'+regionSelected+'/wows/account/list/?application_id=5683096485795178c5de2515394ade39';
-    //     var formData = {
-    //     'search' : usernameSelected.val(),
-    //     'limit'  : 5
-    //     };
 
-    //   $.ajax({
-    //     type : 'POST',
-    //     url : url,
-    //     data : formData,
-    //     dataType : 'JSON',
-    //     encode : true,
-    //     success: function (data) {
-    //       if (data.status == "ok") {
-    //         usernameWarning.html("DATA GETTT!");
-    //       }else{
-    //         usernameWarning.html("DATA NOT GETT!");
-    //       }
-    //     },
-    //     error: function (xhr, status, error) {
-    //       usernameWarning.html('something went wrong..');
-    //     }
-    //   });
-
-    }
-    else{}
+    usernameSelected.blur(function () {
+        $('.searchresult').hide();
     });
+
     usernameSelected.keyup(function() {
+        var regionSelected = $('#inputState :selected').val();
         var url = 'https://api.worldofwarships.'+regionSelected+'/wows/account/list/?application_id=5683096485795178c5de2515394ade39';
         var formData = {
         'search' : usernameSelected.val(),
@@ -62,7 +36,7 @@ $(document).ready(function () {
           }
         },
         error: function (xhr, status, error) {
-          usernameWarning.html('something went wrong..');
+            appends.append('<a class="searchlist">'+'Something Went Wrong..'+'</a>');
         }
       });
     });
