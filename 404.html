@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Statistics | WOWSTRACKR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:100,300,400,700&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link href="src/css/icon-font.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body class="wrepper">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img height="45px" src="src/img/wowslogo.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-4 mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">PLAYERS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CLANS</a>
+            </li>
+            <li class="nav-item">
+                Log In
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <label class="sr-only" for="inlineFormInputGroup">In-game Name</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <select id="inputState" class="form-control">
+                        <option selected>ASIA</option>
+                        <option>NA</option>
+                        <option>RU</option>
+                        <option>EU</option>
+                        <option>CN</option>
+                    </select>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="In-game Name">
+                <div class="input-group-prepend">
+                    <button class="btn btn-danger" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<div class="wrapper m-5">
+    <div class="container-fluid">
+        <div class="main-content-top">
+            <div class="background"></div>
+        </div>
+        <div class="row margintop5">
+            <div class="col-lg-5 text-white account_details">
+                <h1>404</h1>
+                <h1>We couldn't find any players, Please try Again</h1>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="src/js/bootstrap.bundle.min.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>

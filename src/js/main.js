@@ -1,45 +1,58 @@
+var regionSelected;
+
 $(document).ready(function () {
     var usernameSelected = $('#ilieksearch');
     $('.searchresult').hide();
     var usernameWarning = $('#res');
 
     usernameSelected.blur(function () {
-        $('.searchresult').hide();
+        // $('.searchresult').hide();
     });
 
     usernameSelected.keyup(function() {
-        var regionSelected = $('#inputState :selected').val();
+
+        regionSelected = $('#inputState :selected').val();
+
         var url = 'https://api.worldofwarships.'+regionSelected+'/wows/account/list/?application_id=5683096485795178c5de2515394ade39';
         var formData = {
         'search' : usernameSelected.val(),
         'limit'  : 5
         };
         let appends = $('.searchresult');
-      $.ajax({
-        type : 'POST',
-        url : url,
-        data : formData,
-        dataType : 'JSON',
-        encode : true,
-        success: function (data) {
-          if (data.status == "ok" && data.data.length > 0) {
-              let actual_resp = data.data;
-              appends.show();
-              appends.empty();
-              actual_resp.forEach(element => {
-                  appends.append('<a class="searchlist" href="'+ element.account_id +'">'+element.nickname+'</a>');
-              })
-          }else{
-            appends.empty();
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: formData,
+            dataType: 'JSON',
+            encode: true,
+            success: function (data) {
+                if (data.status == "ok" && data.data.length > 0) {
+                    let actual_resp = data.data;
+                    appends.show();
+                    appends.empty();
+                    actual_resp.forEach(element => {
+                        appends.append('<a class="searchlist" onclick="searchstore(event,this.id)" href="#" id="' + element.account_id + '">' + element.nickname + '</a>');
+                    })
+                } else {
+                    appends.empty();
 
-            appends.append('<a class="searchlist">'+'Players Not Found'+'</a>');
-          }
-        },
-        error: function (xhr, status, error) {
-            appends.append('<a class="searchlist">'+'Something Went Wrong..'+'</a>');
-        }
-      });
+                    appends.append('<a class="searchlist">' + 'Players Not Found' + '</a>');
+                }
+            },
+            error: function (xhr, status, error) {
+                appends.empty();
+                appends.append('<a class="searchlist">' + 'Something Went Wrong..' + '</a>');
+            }
+        });
+
+
+
     });
+
+
+
+    $('[data-toggle="tooltip"]').tooltip();
+
     var ctx = document.getElementById('warship-types').getContext('2d');
     var labels = ['Battleships', 'Destroyers', 'Cruisers', 'Aircraft Carriers'];
     var data = [683, 7, 696, 97];
@@ -108,7 +121,13 @@ $(document).ready(function () {
         }
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
+    $('body > *').not('.searchlist, .searchresult, #res').click(function () {
+        $('.searchresult').hide();
+    });
+
+    $(document.body).on('click', 'a.searchlist', function (event) {
+
+    })
 
 });
 
@@ -134,6 +153,17 @@ $('.tablinks').click(function () {
    });
     $(this).addClass('active');
 });
+
+function searchstore(event,id) {
+    event.preventDefault();
+
+    localStorage.setItem('account_id', id);
+    localStorage.setItem('region', regionSelected);
+
+    console.log('account_id = ' + localStorage.getItem('account_id') + ' region = ' + localStorage.getItem('region'));
+
+    window.location.href = './stat_players.html'
+}
 
 function LogoutController($scope) {
     let user = JSON.parse(localStorage.getItem('username'));

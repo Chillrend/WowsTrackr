@@ -324,3 +324,7 @@ h2.account-title {
     display: block;
     border-bottom: 2px solid #fff;
 }
+
+#ship-stats{
+    display: none;
+}

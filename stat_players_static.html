@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Statistics | WOWSTRACKR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:100,300,400,700&amp;subset=latin-ext"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link href="src/css/icon-font.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body class="wrepper">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img height="45px" src="src/img/wowslogo.png" alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-4 mr-auto">
+            <li class="nav-item ">
+                <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">PLAYERS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CLANS</a>
+            </li>
+            <li class="nav-item">
+                Log In
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <label class="sr-only" for="inlineFormInputGroup">In-game Name</label>
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <select id="inputState" class="form-control">
+                        <option selected>ASIA</option>
+                        <option>NA</option>
+                        <option>RU</option>
+                        <option>EU</option>
+                        <option>CN</option>
+                    </select>
+                </div>
+                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="In-game Name">
+                <div class="input-group-prepend">
+                    <button class="btn btn-danger" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<div class="wrapper m-5">
+    <div class="container-fluid">
+        <div class="main-content-top">
+            <div class="background"></div>
+        </div>
+        <div class="row margintop5">
+            <div class="col-lg-5 text-white account_details">
+                <table>
+                    <tr>
+                        <td class="account_avatar">
+                            <img class="img-fluid _background"
+                                 src="https://glossary-wows-global.gcdn.co/icons//rank_battles/bg/icon_rank_4_1a84704d212ef35f6882071f4e5ff68cc85d471c18bcbb9cc9a8af80fba38c05.png"
+                                 alt="">
+                            <img class="img-fluid"
+                                 src="https://glossary-wows-global.gcdn.co/icons//rank_battles/insignias/icon_rank_big_14_a54ae96abfe9503d5bc1f7fe9ef5f49d0f6ccbac842a10b21ba59799abd57068.png"
+                                 alt="">
+                        </td>
+                        <td class="account_name">
+                            <h4 class="condensed">Mistbreaker</h4>
+                            <span>Registered: 02/08/2018</span>
+                            <p>Rank 14, Level 15 of service record</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-lg-3 text-white">
+                <h4 class="condensed">Clans</h4>
+                <h6>[EZPZ] EZPZ</h6>
+                <p>Deputy Commander</p>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-3">
+                <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a class="flex-sm-fill text-sm-center nav-link active" href="#">
+                        <img height="24px" src="src/img/random-battle.png" alt=""> RANDOM BATTLES
+                    </a>
+                </nav>
+            </div>
+            <div class="col-lg-6">
+                <nav class="nav nav-pills flex-column flex-sm-row">
+                    <a data-tab="account_basic_stats" class="flex-sm-fill text-sm-center nav-link active tablinks" href="#">STATISTICS</a>
+                    <a data-tab="detailed_stats" class="flex-sm-fill text-sm-center nav-link tablinks" href="#">DETAILED STATISTICS</a>
+                    <a data-tab="ship-stats" class="flex-sm-fill text-sm-center nav-link tablinks" href="#">WARSHIPS</a>
+                </nav>
+            </div>
+        </div>
+        <div class="tabcontent" id="account_basic_stats">
+            <div class="row account_main_stats_table text-white">
+                <div class="icons">
+                    <div class="battle">
+                        <i class="icon-battle" style="font-size: 52pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-trophy" style="font-size: 52pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-stars" style="font-size: 52pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-detonated" style="font-size: 82pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-sunk" style="font-size: 82pt;"></i>
+                    </div>
+                </div>
+                <div class="name">
+                    <div>Battles Played</div>
+                    <div>Victories/Battles</div>
+                    <div>Average Experience</div>
+                    <div>Avg. Damage Caused / Battle</div>
+                    <div>Kill/Death Ratio</div>
+                </div>
+                <div class="values">
+                    <div>1,450</div>
+                    <div>56.98%</div>
+                    <div>1,532</div>
+                    <div>63,403</div>
+                    <div>1,73</div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <table class="account-table _left">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title">Overall Results</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Battles</span></td>
+                            <td class="_value"><span>1,483</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Victories</span></td>
+                            <td class="_value"><span>845</span>
+                                <small>(56.98%)</small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Battles survived</span></td>
+                            <td class="_value"><span>683</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Hit Ratio</span></td>
+                            <td class="_value"><span>28%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Damage caused</span></td>
+                            <td class="_value"><span>94,026,173</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Warships destroyed</span></td>
+                            <td class="_value"><span>1,385</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Aircraft destroyed</span></td>
+                            <td class="_value"><span>2,307</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-4">
+                    <table class="account-table _center">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title">Average Score per Battle</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Experience</span></td>
+                            <td class="_value"><span>1,532.06</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Damage caused</span></td>
+                            <td class="_value"><span>63,402.68</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Warships destroyed</span></td>
+                            <td class="_value"><span>0.93</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Aircraft destroyed</span></td>
+                            <td class="_value"><span>1.56</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-4">
+                    <table class="account-table _right">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title">Highest Score</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Experience</span></td>
+                            <td class="_value"><span>5,376</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Damage caused</span></td>
+                            <td class="_value"><span>235,123</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Warships destroyed</span></td>
+                            <td class="_value"><span>6</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Aircraft destroyed</span></td>
+                            <td class="_value"><span>34</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="row account_main_stats_table no-padding-top text-white">
+                <h2 class="account-title text-center">Armament Use</h2>
+                <div class="icons">
+                    <div class="battle">
+                        <i class="icon-kill_main_battery" style="font-size: 82pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-kill_planes" style="font-size: 82pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-kill_torpedo" style="font-size: 82pt;"></i>
+                    </div>
+                    <div class="battle">
+                        <i class="icon-detonated" style="font-size: 82pt;"></i>
+                    </div>
+                </div>
+                <div class="name">
+                    <div>Destroyed by Main Battery</div>
+                    <div>Destroyed by Aviation</div>
+                    <div>Destroyed by Torpedoes</div>
+                    <div>Destroyed by Other Means</div>
+                </div>
+                <div class="values">
+                    <div>1,450</div>
+                    <div>2</div>
+                    <div>632</div>
+                    <div>104</div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="row">
+                <div class="col-xl-6">
+                    <h3 class="account-title">Warships Types</h3>
+                    <canvas id="warship-types"></canvas>
+                </div>
+                <div class="col-xl-6">
+                    <h3 class="account-title">Nations</h3>
+                    <canvas id="nation-types"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="tabcontent" id="detailed_stats">
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <table class="account-table _right">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title"><i
+                                    style="vertical-align: middle; font-size: 32pt;" class="icon-sunk"></i> Warships
+                                Sunk</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Main battery</span></td>
+                            <td class="_value"><span>1,087</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Torpedoes</span></td>
+                            <td class="_value"><span>101</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Secondary battery</span></td>
+                            <td class="_value"><span>49</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Aircraft</span></td>
+                            <td class="_value"><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Ramming</span></td>
+                            <td class="_value"><span>11</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-6">
+                    <table class="account-table _right">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title"><i
+                                    style="vertical-align: middle; font-size: 32pt;" class="icon-spotting"></i> Hit
+                                Ratio</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Main battery</span></td>
+                            <td class="_value"><span>30%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Torpedoes</span></td>
+                            <td class="_value"><span>10%</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Secondary battery</span></td>
+                            <td class="_value"><span>18%</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <table class="account-table _right">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title"><i
+                                    style="vertical-align: middle; font-size: 32pt;" class="icon-detonated"></i> Most
+                                Warships Sunk in a Battle</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Main battery</span></td>
+                            <td class="_value"><span>6</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Torpedoes</span></td>
+                            <td class="_value"><span>4</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Secondary battery</span></td>
+                            <td class="_value"><span>3</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Aircraft</span></td>
+                            <td class="_value"><span>1</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Ramming</span></td>
+                            <td class="_value"><span>1</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col-lg-6">
+                    <table class="account-table _right">
+                        <thead>
+                        <tr>
+                            <th colspan="2"><h3 class="account-title"><i
+                                    style="vertical-align: middle; font-size: 18pt;" class="icon-battle"></i> Endurance</h3></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="_name"><span>Battle Survived</span></td>
+                            <td class="_value"><span>683</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Victories in Battle Survived</span></td>
+                            <td class="_value"><span>538</span></td>
+                        </tr>
+                        <tr>
+                            <td class="_name"><span>Distance Sailed in Whole time (Miles)</span></td>
+                            <td class="_value"><span>67,208</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabcontent" id="ship-stats">
+            <div class="card-group mt-4">
+                <div class="card bg-dark text-white">
+                    <img src="src/img/flags/item_image_flag__germany.webp" class="card-img img-fluid" alt="Commonwealth Flag">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title text-premium"><img height="24px" src="http://wiki.gcdn.co/images/6/6b/Wows_flag_Germany.png" alt="Perth"><i class="ship-icon icon-BB"></i> VIII Tirpitz</h5>
+                        <img class="img-fluid" src="https://glossary-wows-global.gcdn.co/icons//vehicle/large/PGSB002_0fe2f9626898e7c12116145456ee3fe7c275ebe7da8554794cc59bda368eeb96.png" alt="Perth">
+                    </div>
+                    <div class="card-img-overlay no-display p-lg-5">
+                        <p><i class="icon-battle"></i> Battles : 187</p>
+                        <p><i class="fas fa-flag"></i> Winrates : 58%</p>
+                        <p><i class="icon-sunk"></i> Ships Sunk : 179</p>
+                        <p><i class="fas fa-star"></i> Experience : 3372</p>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white">
+                    <img src="src/img/flags/item_image_flag__commonwealth.webp" class="card-img img-fluid" alt="Commonwealth Flag">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title text-premium"><img height="24px" src="http://wiki.gcdn.co/images/3/3e/Wows_flag_Commonwealth.PNG" alt="Perth"><i class="ship-icon icon-CA"></i> VI Perth</h5>
+                        <img class="img-fluid" src="https://glossary-wows-global.gcdn.co/icons//vehicle/large/PUSC506_3f964b4c77926fa087994693a0dad69743e7395a113095ae5dc69e8947a48407.png" alt="Perth">
+                    </div>
+                    <div class="card-img-overlay no-display p-lg-5">
+                        <p><i class="icon-battle"></i> Battles : 1500</p>
+                        <p><i class="fas fa-flag"></i> Winrates : 51%</p>
+                        <p><i class="icon-sunk"></i> Ships Sunk : 120</p>
+                        <p><i class="fas fa-star"></i> Experience : 1200</p>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white">
+                    <img src="src/img/flags/item_image_flag__usa.webp" class="card-img img-fluid" alt="Commonwealth Flag">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title"><img height="24px" src="http://wiki.gcdn.co/images/f/f2/Wows_flag_USA.png" alt="Perth"><i class="ship-icon icon-CA"></i> X Des Moines</h5>
+                        <img class="img-fluid" src="https://glossary-wows-global.gcdn.co/icons//vehicle/large/PASC020_b26d342df4b3e5b587702c2b8d0cccf34b95d0db62bb17885d19ecbf18cd5529.png" alt="Perth">
+                    </div>
+                    <div class="card-img-overlay no-display p-lg-5">
+                        <p><i class="icon-battle"></i> Battles : 1500</p>
+                        <p><i class="fas fa-flag"></i> Winrates : 51%</p>
+                        <p><i class="icon-sunk"></i> Ships Sunk : 120</p>
+                        <p><i class="fas fa-star"></i> Experience : 1200</p>
+                    </div>
+                </div>
+                <div class="card bg-dark text-white">
+                    <img src="src/img/flags/item_image_flag__panasia.webp" class="card-img img-fluid" alt="Commonwealth Flag">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title text-premium"><img height="24px" src="http://wiki.gcdn.co/images/3/33/Wows_flag_Pan_Asia.png" alt="Perth"><i class="ship-icon icon-CA"></i> VIII Irian</h5>
+                        <img class="img-fluid" src="https://glossary-wows-global.gcdn.co/icons//vehicle/large/PZSC508_f8c63180b8459c000dc159c613464ab1ce44259f3ccb61627204bf5fee472b62.png" alt="Irian">
+                    </div>
+                    <div class="card-img-overlay no-display p-lg-5">
+                        <p><i class="icon-battle"></i> Battles : 1500</p>
+                        <p><i class="fas fa-flag"></i> Winrates : 51%</p>
+                        <p><i class="icon-sunk"></i> Ships Sunk : 120</p>
+                        <p><i class="fas fa-star"></i> Experience : 1200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.2/dist/Chart.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="src/js/bootstrap.bundle.min.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>
